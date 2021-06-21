@@ -3,10 +3,7 @@ jobs:
   timeoutInMinutes: 0
   pool:
     name: ImporterPool
-
   steps:
-- task: CmdLine@1
-  displayName: 'Install4J Execute Installer'
-  inputs:
-    filename: 'C:\Program Files\install4j9\bin\install4jc.exe'
-    arguments: ' C:\impoter_assembly\Test.install4j'
+    - task: CmdLine@2
+      inputs:
+        script: 'install4jc C:\impoter_assembly\Test.install4j'
