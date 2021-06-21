@@ -10,9 +10,19 @@ jobs:
   timeoutInMinutes: 0
   pool:
     name: ImporterPool
+  
+
   steps:
   - task: CmdLine@2
     displayName: '-install4J execution'
     inputs:
       workingDirectory: 'C:\Program Files\install4j9\bin\'
       script: 'install4jc C:\impoter_assembly\Test.install4j'
+
+  - task: CopyFiles@1
+    displayName: 'Copy Media Files'
+    inputs:
+      SourceFolder: 'C:\media'
+      Contents: '**\*'
+      TargetFolder: 'C:\Archive\Importer'
+      OverWrite: true
