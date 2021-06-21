@@ -7,4 +7,5 @@ jobs:
   - task: CmdLine@2
     displayName: '-install4J execution'
     inputs:
+      workingDirectory: 'C:\Program Files\install4j9\bin\'
       script: 'install4jc C:\impoter_assembly\Test.install4j'
