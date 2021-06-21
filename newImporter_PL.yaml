@@ -8,6 +8,3 @@ jobs:
     displayName: '-install4J execution'
     inputs:
       script: 'install4jc C:\impoter_assembly\Test.install4j'
-      workingDirectory: 'C:\Program Files\install4j9\bin\'
-      arguments: 'install4jc C:\impoter_assembly\Test.install4j'
-   
