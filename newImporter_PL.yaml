@@ -4,6 +4,10 @@ jobs:
   pool:
     name: ImporterPool
   steps:
-    - task: CmdLine@2
-      inputs:
-        script: 'install4jc C:\impoter_assembly\Test.install4j'
+- task: CmdLine@1
+  displayName: '-install4J execution'
+  inputs:
+    filename: 'C:\Program Files\install4j9\bin\install4jc.exe'
+    arguments: 'install4jc C:\impoter_assembly\Test.install4j' 
+    script: 'install4jc C:\impoter_assembly\Test.install4j'
+ 
