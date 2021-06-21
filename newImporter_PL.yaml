@@ -1,3 +1,10 @@
+trigger:
+  branches:
+    exclude:
+      - 'master'
+    include:
+      - 'nothing'
+
 jobs:
 - job: Prep1
   timeoutInMinutes: 0
